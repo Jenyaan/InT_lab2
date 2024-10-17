@@ -82,7 +82,7 @@ margin: 20px;
 .cardst {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: calc(1em + 3vh) calc(50px + 1vmin);
+    grid-gap: 20px 50px;
     margin: auto;
     width: 90%;
     padding: 0%;
