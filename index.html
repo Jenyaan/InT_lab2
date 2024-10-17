@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lab_2</title>
+</head>
+<style>
+    body{
+    background-image: url(img/Фон.jpg);
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    font-size: 16px;
+    min-width: 1440px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .jump_button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(41, 175, 130);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: bounce 1s infinite linear;
+    float: right;
+  }
+
+  @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0); 
+        }
+        50% {
+            transform: translateY(-20px); 
+        }
+    }
+</style>
+
+<body>
+    <header id="zagolovok" >
+        <h2>Лабораторна робота №2</h2> 
+        <p>Варіант №8</p>
+    </header>
+    <div style="display: flex;">
+        <div class="navigator">
+            <ul class="navigator_menu">
+                <li id="zagolovok"><a href="#zagolovok">Початок</a></li>
+                <li id="product"><a href="#product">Товар</a></li>
+                <li id="info"><a href="#info">Довідка</a></li>
+                <li id="over"><a href="#over">Кінець</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="content" id="product">
+                <nav class="glav_product"><h1>IQUESI - Магазин головоломок</h1></nav>
+                <div class="product_cart">
+                    <ul class = "cardst" id="product-list">
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product1.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар1</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">200 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product2.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар2</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">350 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product3.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар3</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">400 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product4.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар4</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">99 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product5.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар5</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">780 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product6.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар6</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">280 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product7.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар7</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">78 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product11.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар8</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">199 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product9.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар9</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">299 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="cartst">
+                            <a class="card_link" href="{% url 'information' product.id %}">
+                                <img class="img_categore" src="img/product10.jpeg" >
+                                <hr>
+                                <p class = "name_acategore">Товар10</p>
+                                <div style="display: flex;" >
+                                    <a href="{% url 'basket_add' product.id %}"><p class="korzina">В корзину</p></a>
+                                    <p class="price_categore">299 грн</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <section class="content" id="info">
+                <div class="content_info">
+                    <p class="content_info_punct">Головоломки — це потужний інструмент для розвитку багатьох когнітивних навичок. Ось кілька основних корисностей:</p>
+                    <li class="content_info_punct">Розвиток логічного мислення. Головоломки вимагають аналізу та роздумів, що сприяє розвитку здатності знаходити зв’язки між елементами завдання та вирішувати проблеми ефективніше.</li>
+                    <li class="content_info_punct">Покращення пам'яті. Рішення головоломок допомагає тренувати як короткострокову, так і довгострокову пам'ять, що підвищує здатність запам'ятовувати деталі та інформацію.</li>
+                    <li class="content_info_punct">Збільшення концентрації. Заглиблення в складні завдання вчить зберігати увагу протягом тривалого часу, що важливо у повсякденному житті та роботі.</li>
+                    <li class="content_info_punct">Розвиток творчого мислення. Деякі головоломки вимагають нестандартного підходу, що сприяє гнучкості розуму та розвитку креативності.</li>
+                    <li class="content_info_punct">Зміцнення зв'язків між нейронами. Рішення головоломок стимулює мозок, створюючи нові нейронні зв'язки, що покращує загальні когнітивні функції та захищає від вікових когнітивних розладів.</li>
+                    <li class="content_info_punct">Формування терпіння та наполегливості. Часто для вирішення головоломок потрібно багато часу та терпіння, що допомагає розвивати стійкість і наполегливість у досягненні цілей.</li>
+                    <li class="content_info_punct">Зниження стресу. Для багатьох людей вирішення головоломок приносить задоволення і допомагає відволіктися від повсякденних турбот, що сприяє зменшенню стресу.</li>
+                    <li class="content_info_punct">Покращення просторового мислення. Просторові головоломки, такі як кубики Рубіка чи пазли, розвивають навички орієнтації у просторі, що корисно для візуального сприйняття і навігації.</li>    
+                </div>
+                <button class="jump_button">jump button</button>
+            </section>
+        </div>
+    </div>
+    
+
+   
+
+    <footer id="over"><h3>Міщенко Євген Євгенович КІУКІу-23-1</h3></footer>
+
+</body>
+</html>
